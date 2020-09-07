@@ -2,9 +2,7 @@
 
 ## 2.2 Java集合
 
-> 作者：Guide哥。
->
-> **介绍:** Github 70k Star 项目  **[JavaGuide](https://github.com/Snailclimb/JavaGuide)**（公众号同名） 作者。每周都会在公众号更新一些自己原创干货。公众号后台回复“1”领取Java工程师必备学习资料+面试突击pdf。
+> NEXT
 
 ### 2.2.1 说说List,Set,Map三者的区别？
 
@@ -146,9 +144,7 @@ public interface RandomAccess {
 2. ==是指对内存地址进行比较 equals()是对字符串的内容进行比较
 3. ==指引用是否相同 equals()指的是值是否相同
 
-> 作者：Guide哥。
->
-> **介绍:** Github 70k Star 项目  **[JavaGuide](https://github.com/Snailclimb/JavaGuide)**（公众号同名） 作者。每周都会在公众号更新一些自己原创干货。公众号后台回复“1”领取Java工程师必备学习资料+面试突击pdf。
+> NEXT
 
 ### 2.2.8 HashMap的底层实现
 

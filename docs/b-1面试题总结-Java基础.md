@@ -2,9 +2,7 @@
 
 # 二 Java基础+集合+多线程+JVM
 
-> 作者：Guide哥。
->
-> **介绍:** Github 70k Star 项目  **[JavaGuide](https://github.com/Snailclimb/JavaGuide)**（公众号同名） 作者。每周都会在公众号更新一些自己原创干货。公众号后台回复“1”领取Java工程师必备学习资料+面试突击pdf。
+> NEXT
 
 ## 2.1 Java基础
 
@@ -91,9 +89,7 @@ JRE 是 Java 运行时环境。它是运行已编译 Java 程序所需的所有�
 - Java 有自动内存管理机制，不需要程序员手动释放无用内存
 - **在 C 语言中，字符串或字符数组最后都会有一个额外的字符‘\0’来表示结束。但是，Java 语言中没有结束符这一概念。** 这是一个值得深度思考的问题，具体原因推荐看这篇文章： [https://blog.csdn.net/sszgg2006/article/details/49148189](https://blog.csdn.net/sszgg2006/article/details/49148189)
 
-> 作者：Guide哥。
->
-> **介绍:** Github 70k Star 项目  **[JavaGuide](https://github.com/Snailclimb/JavaGuide)**（公众号同名） 作者。每周都会在公众号更新一些自己原创干货。公众号后台回复“1”领取Java工程师必备学习资料+面试突击pdf。
+> NEXT
 
 ### 6. 什么是 Java 程序的主类 应用程序和小程序的主类有何不同?
 
