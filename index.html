@@ -1,55 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>NEXT</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-</head>
-
-<body>
-  <div id="app"></div>
-  <!-- docsify-edit-on-github -->
-  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
-  <script>
-    window.$docsify = {
-      name: 'NEXT',
-      repo: 'https://github.com/hybridtheorylink/hybridtheorylink.github.io',
-      maxLevel: 5,//最大支持渲染的标题层级
-      subMaxLevel: 3,
-      homepage: 'README.md',
-      coverpage: true,
-      loadSidebar: true,
-      auto2top: true,//切换页面后是否自动跳转到页面顶部
-      //全文搜索
-      search: {
-        //maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '找不到结果',
-        // 搜索标题的最大程级, 1 - 6
-        depth: 3,
-      },
-      plugins: [
-        EditOnGithubPlugin.create('https://github.com/hybridtheorylink/hybridtheorylink.github.io')
-      ],
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetSpeed Support</title>
+  <meta name="description" content="Official technical support page for NetSpeed.">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #11253c;
+      --muted: #4d637c;
+      --accent: #0d7dff;
+      --line: #d9e3ef;
     }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <!--Java代码高亮-->
-  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
-  <!--全文搜索,直接用官方提供的无法生效-->
-  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
-  <!-- 复制到剪贴板 -->
-  <script src="//unpkg.com/docsify-copy-code"></script>
-  <!-- 图片缩放 -->
-  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-</body>
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fbff 40%, #f4f7fb 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 18px 48px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 26px rgba(17, 37, 60, 0.06);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 38px);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .full {
+      margin-top: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1f4f89;
+      background: #e7f0fb;
+      border: 1px solid #cfe0f6;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">Technical Support</span>
+      <h1>NetSpeed Support</h1>
+      <p class="subtitle">Help center for setup, troubleshooting, and app questions.</p>
+      <p class="subtitle">Website: <a href="https://hybridtheorylink.github.io/">hybridtheorylink.github.io</a></p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Contact Support</h2>
+        <p>If you need help, please email us and include your device model and iOS version.</p>
+        <p><strong>Email:</strong> <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Quick Troubleshooting</h2>
+        <ul>
+          <li>Update to the latest iOS version.</li>
+          <li>Open NetSpeed and allow Location + Live Activities.</li>
+          <li>Enable Background App Refresh for NetSpeed.</li>
+          <li>Restart the app if monitoring data is not updating.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Frequently Asked Questions</h2>
+        <h3>Why is Dynamic Island not shown?</h3>
+        <p>Dynamic Island requires a supported iPhone model and iOS 16.2 or later.</p>
+        <h3>Why does speed update slower in background?</h3>
+        <p>iOS may limit update frequency to save battery and system resources.</p>
+      </article>
+
+      <article class="card">
+        <h2>Privacy</h2>
+        <p>NetSpeed may use location to display coverage mapping features. Data is used only for app functionality.</p>
+        <p>For policy details, add your privacy page link here:</p>
+        <p><a href="https://hybridtheorylink.github.io/privacy">https://hybridtheorylink.github.io/privacy</a></p>
+      </article>
+    </section>
+
+    <section class="card full">
+      <h2>Before You Contact Us</h2>
+      <ul>
+        <li>App version (for example: 1.0.0)</li>
+        <li>Device model (for example: iPhone 15 Pro)</li>
+        <li>iOS version</li>
+        <li>Short issue description and screenshot (if possible)</li>
+      </ul>
+    </section>
+
+    <p class="footer">© 2026 NetSpeed. All rights reserved.</p>
+  </main>
+</body>
 </html>
