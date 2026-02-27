@@ -1,13 +1,15 @@
-# NEXT
+NetSpeed helps you monitor your network performance in real time.
 
-[如何使用docsify搭建文档类型的网站](./docs/how-to-use-docsify.md)
+Key features:
+• Live download and upload speed monitoring
+• Live Activity support for Lock Screen and Dynamic Island
+• One-tap speed test (download and upload)
+• 60-second speed history graph
+• Coverage map with speed points based on your location
+• Network type detection (Wi-Fi / Cellular)
 
-### 安利一个在线学习Java的文档
+Use NetSpeed to quickly understand current network quality, spot unstable connections, and compare performance across different locations.
 
-- 在线阅读地址：https://snailclimb.gitee.io/javaguide-interview/#/
-- Github：https://github.com/Snailclimb/JavaGuide-Interview
-- 码云：https://gitee.com/SnailClimb/JavaGuide-Interview
-
-### 作者介绍
-
-**作者介绍:**  NEXT
+Notes:
+• Dynamic Island UI requires supported iPhone models.
+• Live Activities require iOS 16.2 or later.
