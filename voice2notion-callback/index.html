@@ -85,23 +85,41 @@
       if (!code) {
         document.getElementById('spinner').style.display = 'none';
         document.getElementById('title').textContent = 'Missing Code';
-        document.getElementById('message').textContent = 'No authorization code found in the URL.';
+        document.getElementById('message').textContent = 'No authorization code found. Please return to Voice2Notion and try again.';
         return;
       }
 
       // Build deep link with all original params forwarded
       var deepLink = 'voice2notion://notion-callback?' + params.toString();
 
-      // Attempt to open the app
-      window.location.href = deepLink;
-
-      // Fallback message after 2s if app didn't open
-      setTimeout(function () {
+      function showFallback() {
         document.getElementById('spinner').style.display = 'none';
-        document.getElementById('title').textContent = 'Open Voice2Notion';
+        document.getElementById('title').textContent = 'Return to Voice2Notion';
         document.getElementById('message').textContent =
-          'If the app did not open automatically, please switch back to Voice2Notion manually.';
-      }, 2000);
+          'Authorization complete. Please switch back to the Voice2Notion app.';
+      }
+
+      // Use iframe to trigger deep link without causing App Store redirect popup
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = deepLink;
+      document.body.appendChild(iframe);
+
+      // Also attempt direct navigation after short delay as fallback
+      setTimeout(function () {
+        window.location.href = deepLink;
+      }, 300);
+
+      // Detect if app opened via visibility change
+      var appOpened = false;
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) appOpened = true;
+      });
+
+      // Show fallback if app did not open within 2.5s
+      setTimeout(function () {
+        if (!appOpened) showFallback();
+      }, 2500);
     })();
   </script>
 </body>
