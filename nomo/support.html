@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — nomo</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --surface2: #161616;
+      --border: rgba(255,255,255,0.08);
+      --text: #f0f0f0;
+      --muted: #888;
+      --accent: #34d399;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header nav { display: flex; gap: 24px; }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    header nav a:hover { color: var(--text); }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+    .page-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .tagline {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 48px 0 16px;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 8px;
+    }
+    p {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 16px;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    ul li, ol li {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* Steps */
+    .steps {
+      list-style: none;
+      padding: 0;
+      counter-reset: step;
+    }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      color: #bbb;
+      font-size: 15px;
+    }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(52,211,153,0.12);
+      border: 1px solid rgba(52,211,153,0.3);
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    /* Feature pills */
+    .features {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #bbb;
+    }
+    .features li::before {
+      content: '✦';
+      color: var(--accent);
+      font-size: 11px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* FAQ accordion (CSS-only) */
+    .faq { margin-top: 8px; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      list-style: none;
+      padding: 18px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item[open] { background: var(--surface); }
+    .faq-body {
+      padding: 0 20px 18px;
+      font-size: 14px;
+      color: #bbb;
+      line-height: 1.65;
+    }
+    .faq-body p { margin-bottom: 8px; font-size: 14px; }
+    .faq-body p:last-child { margin-bottom: 0; }
+
+    /* Contact box */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .contact-box .contact-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .contact-box h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: var(--text);
+    }
+    .contact-box p { margin: 0 0 20px; font-size: 14px; }
+    .contact-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .contact-btn:hover { opacity: 0.85; text-decoration: none; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 13px; color: var(--muted); margin: 0; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    footer nav { display: flex; gap: 20px; }
+
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      h1 { font-size: 32px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">nomo</span>
+  <nav>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-label">Support</div>
+  <h1>How Can We Help?</h1>
+  <p class="tagline">Your Notion databases, reimagined as a calendar.</p>
+
+  <!-- How it works -->
+  <h2>How It Works</h2>
+  <ol class="steps">
+    <li>Connect your Notion account with one tap via secure OAuth.</li>
+    <li>Choose a Notion database that has a Date property.</li>
+    <li>nomo maps every page onto your calendar by its date.</li>
+    <li>Tap any entry to view or edit it. Drag to reschedule — changes sync back to Notion instantly.</li>
+    <li>Add multiple databases, each with its own color, in one calendar.</li>
+  </ol>
+
+  <!-- Features -->
+  <h2>Features</h2>
+  <ul class="features">
+    <li>View multiple Notion databases in one calendar, each with its own color</li>
+    <li>Tap any day to create a new page in your database</li>
+    <li>Edit titles and properties directly from the app</li>
+    <li>Drag and drop to reschedule with instant sync to Notion</li>
+    <li>Swipe between months or jump to any date</li>
+    <li>Pull to refresh and stay up to date</li>
+    <li>Intentionally minimal — no clutter, just your Notion data as a calendar</li>
+  </ul>
+
+  <!-- Requirements -->
+  <h2>Requirements</h2>
+  <ul>
+    <li>A Notion account (free or paid)</li>
+    <li>At least one Notion database with a Date property</li>
+  </ul>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+
+    <details class="faq-item">
+      <summary>Why isn't nomo connecting to my Notion account?</summary>
+      <div class="faq-body">
+        <p>Make sure you complete the full OAuth authorization flow in Safari. If the connection fails:</p>
+        <p>1. Go to Settings → Disconnect Notion, then try connecting again.<br>
+           2. Check that you have an active internet connection.<br>
+           3. In your Notion account under <strong>Settings → My connections</strong>, remove nomo and re-authorize.</p>
+        <p>If the issue persists, please email us with your iOS version and a description of where the flow stops.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>My Notion database isn't showing up in the database picker.</summary>
+      <div class="faq-body">
+        <p>nomo only displays databases that have at least one Date property. If your database isn't listed:</p>
+        <p>• Make sure the database has a property of type <strong>Date</strong> (not a formula or rollup that produces a date).<br>
+           • Try disconnecting and reconnecting your Notion account to refresh the list.<br>
+           • Ensure you granted nomo access to the correct Notion workspace during authorization.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I add a new entry to my calendar?</summary>
+      <div class="faq-body">
+        <p>Tap any day on the calendar to create a new page in your selected Notion database. A quick-entry form will appear where you can set the title and any other properties. The new page is saved to Notion instantly.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does drag-and-drop rescheduling work?</summary>
+      <div class="faq-body">
+        <p>Long-press any calendar entry to lift it, then drag it to a new date and release. nomo updates the Date property of the corresponding Notion page immediately. You should see the change reflected in Notion within seconds.</p>
+        <p>If the sync fails (e.g., due to a lost connection), nomo will show an error. The entry will snap back to its original date — simply try again once your connection is restored.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I display more than one Notion database at the same time?</summary>
+      <div class="faq-body">
+        <p>Yes. In the app settings, you can add multiple databases and assign each one a different color. All entries appear together in one unified calendar view, color-coded by their source database.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>A change I made in nomo isn't showing in Notion (or vice versa).</summary>
+      <div class="faq-body">
+        <p>Pull down on the calendar to manually refresh. nomo fetches the latest data from Notion on launch and on pull-to-refresh. Changes made in nomo are synced immediately, but Notion's own app may take a moment to reflect them. If sync issues persist, try disconnecting and reconnecting your Notion account.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is my Notion data stored on your servers?</summary>
+      <div class="faq-body">
+        <p>No. nomo fetches your Notion data directly from the Notion API and displays it on your device. We do not operate backend servers that store your Notion content.</p>
+        <p>Your Notion OAuth token is stored securely in the iOS Keychain on your device and is never transmitted to us. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I disconnect my Notion account?</summary>
+      <div class="faq-body">
+        <p>Go to <strong>Settings → Disconnect Notion</strong> inside the app. This removes the stored OAuth token from your device. To fully revoke access, also visit your Notion account under <strong>Settings → My connections</strong> and remove nomo from there.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does nomo work with Notion's free plan?</summary>
+      <div class="faq-body">
+        <p>Yes. nomo works with any Notion account — free or paid — as long as you have at least one database with a Date property.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-box">
+    <div class="contact-icon">✉️</div>
+    <h3>Still need help?</h3>
+    <p>We're happy to assist. Email us and we'll get back to you as soon as possible.</p>
+    <a class="contact-btn" href="mailto:hswillg@gmail.com">hswillg@gmail.com</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 nomo · OPC</p>
+  <nav>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</footer>
+
+</body>
+</html>
