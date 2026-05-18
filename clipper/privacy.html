@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SnipClip</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: rgba(255,255,255,0.08);
+      --text: #f0f0f0;
+      --muted: #888;
+      --accent: #5e9bff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff 30%, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    header nav a:hover { color: var(--text); }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+    .page-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 40px 0 12px;
+      color: var(--text);
+    }
+    p {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 16px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    ul li {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 8px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .highlight-box {
+      background: rgba(94,155,255,0.07);
+      border: 1px solid rgba(94,155,255,0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+    .highlight-box p { margin: 0; color: #ccc; }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 48px;
+    }
+    .contact-box p { margin: 0; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 13px; color: var(--muted); margin: 0; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      h1 { font-size: 30px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">SnipClip</span>
+  <nav><a href="terms.html">Terms of Use</a></nav>
+</header>
+
+<main>
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: May 18, 2026</p>
+
+  <div class="highlight-box">
+    <p><strong>Zero-knowledge design:</strong> SnipClip encrypts all clipboard data on your device before syncing. Our servers store only ciphertext — we are technically unable to read your clipboard content.</p>
+  </div>
+
+  <p>SnipClip ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you use the SnipClip application on iOS and any other supported platforms.</p>
+
+  <h2>1. Information We Collect</h2>
+  <p>We collect only what is necessary to deliver the service:</p>
+  <ul>
+    <li><strong>Account identifiers:</strong> When you sign in with Apple, we receive an anonymized Apple User ID and, if you choose to share it, your Apple-generated relay email address. If you register with an email address, we store that email to authenticate your account.</li>
+    <li><strong>Encrypted clipboard data:</strong> Clipboard items (text, images, files, URLs, rich text, HTML, colors) are encrypted on your device with AES-256-GCM before transmission. We store only the resulting ciphertext; the plaintext is never accessible to us.</li>
+    <li><strong>Encrypted snippets:</strong> Saved snippets and their tags are encrypted under the same key hierarchy before being synced to our servers.</li>
+    <li><strong>Subscription status:</strong> We store whether your account has an active subscription or lifetime license, and its expiry date, to unlock Pro features.</li>
+    <li><strong>Support communications:</strong> If you contact us by email, we retain that correspondence to resolve your request.</li>
+  </ul>
+
+  <h2>2. How We Use Your Information</h2>
+  <ul>
+    <li>To authenticate you and maintain your session across devices</li>
+    <li>To sync your encrypted clipboard history and snippets across your devices</li>
+    <li>To verify your subscription entitlement and unlock Pro features</li>
+    <li>To respond to support requests and troubleshoot issues</li>
+    <li>To enforce our Terms of Use and prevent abuse</li>
+  </ul>
+
+  <h2>3. End-to-End Encryption Architecture</h2>
+  <p>SnipClip uses a two-layer key hierarchy to ensure that only you can read your clipboard data:</p>
+  <ul>
+    <li><strong>Key Encryption Key (KEK):</strong> Derived from your PIN and email using PBKDF2-SHA256 with 300,000 iterations and a unique per-account salt. The KEK is never sent to or stored on our servers.</li>
+    <li><strong>Data Encryption Key (DEK):</strong> A random AES-256 key generated on your device. The DEK is wrapped (encrypted) with your KEK using AES-256-GCM and stored on our server — but only in its encrypted form. We cannot unwrap it.</li>
+    <li><strong>Content encryption:</strong> All clipboard items are encrypted with your DEK using AES-256-GCM before upload. Our servers store only ciphertext.</li>
+    <li><strong>Local protection:</strong> The decrypted DEK is stored in the iOS Keychain with <code>kSecAccessControlUserPresence</code>, requiring Face ID, Touch ID, or your device passcode to access it.</li>
+  </ul>
+  <p>Because the KEK is derived entirely on your device and never transmitted, a breach of our servers would expose only data that is cryptographically impossible to decrypt without your PIN and email.</p>
+
+  <h2>4. Cross-Platform Sync</h2>
+  <p>SnipClip supports cross-platform clipboard synchronization. When you sign in on a new device, you re-derive your KEK locally (using your PIN and email), download the encrypted DEK from our server, unwrap it on-device, and use it to decrypt your history. The sync process never exposes your plaintext data to our infrastructure.</p>
+
+  <h2>5. Data Storage and Security</h2>
+  <p>Encrypted data is stored on servers hosted in a secure cloud environment. We apply industry-standard safeguards including HTTPS/TLS for all data in transit, access controls, and regular security reviews. However, no system is 100% immune to breach — our zero-knowledge design ensures that even a worst-case server compromise cannot expose your plaintext clipboard content.</p>
+
+  <h2>6. Data Retention and Deletion</h2>
+  <p>We retain your encrypted clipboard data for as long as your account is active. You may delete individual items at any time within the app. You may permanently delete your account and all associated data from <strong>Settings → Delete Account</strong> in the app. Deletion is irreversible.</p>
+
+  <h2>7. Third-Party Services</h2>
+  <ul>
+    <li><strong>Apple Sign In:</strong> Authentication via Apple's Sign in with Apple service is subject to Apple's <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a>. We never receive your Apple ID password.</li>
+    <li><strong>Apple iOS Keychain &amp; Biometrics:</strong> Local key storage and biometric authentication are provided by Apple's frameworks on your device.</li>
+  </ul>
+  <p>We do not sell, rent, or share your data with third-party advertising networks or data brokers.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>SnipClip is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately and we will delete it.</p>
+
+  <h2>9. Your Rights</h2>
+  <p>Depending on your jurisdiction, you may have the right to:</p>
+  <ul>
+    <li>Access the personal information we hold about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your account and all associated data</li>
+    <li>Withdraw consent for data processing (where applicable)</li>
+    <li>Lodge a complaint with a supervisory authority</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date at the top. Continued use of SnipClip after changes take effect constitutes your acceptance of the revised policy.</p>
+
+  <h2>11. Contact Us</h2>
+  <div class="contact-box">
+    <p>If you have questions or concerns about this Privacy Policy, please contact us:<br><br>
+    <a href="mailto:support@nextlinkto.cloud">support@nextlinkto.cloud</a><br><br>
+    We aim to respond within 2 business days.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 SnipClip · OPC</p>
+  <p><a href="terms.html">Terms of Use</a></p>
+</footer>
+
+</body>
+</html>

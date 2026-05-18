@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnipClip — Encrypted Clipboard Manager</title>
+  <meta name="description" content="SnipClip is a cross-platform clipboard manager with end-to-end AES-256 encryption. Your history, your snippets, your keys.">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: rgba(255,255,255,0.08);
+      --text: #f0f0f0;
+      --muted: #888;
+      --accent: #5e9bff;
+      --accent2: #a78bfa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff 30%, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header nav { display: flex; gap: 24px; }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    header nav a:hover { color: var(--text); }
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(94,155,255,0.1);
+      border: 1px solid rgba(94,155,255,0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 40%, #aaa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #999;
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .features {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .support-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+    }
+    .support-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .faq { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+    .faq-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: var(--muted); margin: 0; }
+    .contact-section {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+      text-align: center;
+    }
+    .contact-section h2 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .contact-section p { color: var(--muted); margin-bottom: 24px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer p { font-size: 13px; color: var(--muted); margin: 0; }
+    footer nav { display: flex; gap: 20px; }
+    footer nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    footer nav a:hover { color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      h1 { font-size: 36px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">SnipClip</span>
+  <nav>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:support@nextlinkto.cloud">Support</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">Cross-Platform · AES-256 Encrypted</div>
+  <h1>Your Clipboard,<br>Secured &amp; Synced</h1>
+  <p>SnipClip captures everything you copy, encrypts it on-device, and syncs it seamlessly across all your devices. Only you hold the keys.</p>
+  <div class="cta-group">
+    <a href="https://apps.apple.com/app/id_snipclip" class="btn btn-primary">Download on App Store</a>
+    <a href="mailto:support@nextlinkto.cloud" class="btn btn-secondary">Contact Support</a>
+  </div>
+</div>
+
+<div class="features">
+  <div class="feature-card">
+    <div class="feature-icon">🔒</div>
+    <h3>End-to-End Encrypted</h3>
+    <p>AES-256-GCM encryption on-device before sync. Keys derived with PBKDF2-SHA256 (300k rounds). Server stores only ciphertext — we can never read your data.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">📋</div>
+    <h3>Clipboard History</h3>
+    <p>Automatically captures text, images, links, files, rich text, HTML, and colors. Filter by type, search by content, see which app each item came from.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">🔖</div>
+    <h3>Saved Snippets</h3>
+    <p>Transform frequently used text into reusable snippets. Organize with colored tags for instant access to templates, codes, and boilerplate.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">⌨️</div>
+    <h3>Custom Keyboard</h3>
+    <p>Access your full clipboard history and snippet library from any app via the SnipClip keyboard extension. Tap to paste without switching apps.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">☁️</div>
+    <h3>Cross-Platform Sync</h3>
+    <p>Your encrypted clipboard follows you across devices. Sign in with Apple or email — your history is always available wherever you work.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">🛡️</div>
+    <h3>Face ID Protection</h3>
+    <p>Your encryption key is stored in the iOS Keychain with Face ID / Touch ID protection. Biometric authentication required to unlock your clipboard.</p>
+  </div>
+</div>
+
+<div class="support-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h4>What happens if I forget my PIN?</h4>
+      <p>Your PIN is used to derive your encryption key and is never stored on our servers. If you forget it, your encrypted data cannot be recovered. Please choose a PIN you can reliably remember.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can SnipClip staff read my clipboard?</h4>
+      <p>No. All data is encrypted on your device before it reaches our servers. We store only AES-256-GCM ciphertext. It is technically impossible for us to read your clipboard content.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I sync to a new device?</h4>
+      <p>Sign in with the same account on the new device and enter your PIN. SnipClip re-derives your encryption key locally and decrypts your history — no plaintext is ever sent over the network.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I cancel my subscription?</h4>
+      <p>Manage subscriptions in iOS Settings → Apple ID → Subscriptions. Cancel at least 24 hours before renewal to avoid the next charge.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I delete my account and data?</h4>
+      <p>Go to Settings → Delete Account inside the app. This permanently removes your account and all encrypted data from our servers.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section">
+  <h2>Get in Touch</h2>
+  <p>Questions, feedback, or need help? We typically respond within 2 business days.</p>
+  <a href="mailto:support@nextlinkto.cloud" class="btn btn-primary">support@nextlinkto.cloud</a>
+</div>
+
+<footer>
+  <p>© 2026 SnipClip · OPC</p>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="mailto:support@nextlinkto.cloud">Support</a>
+  </nav>
+</footer>
+
+</body>
+</html>
