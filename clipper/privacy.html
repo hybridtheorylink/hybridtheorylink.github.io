@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — SnipClip</title>
+  <title>Privacy Policy — Clipper: Universal Clipboard</title>
   <style>
     :root {
       --bg: #0a0a0f;
@@ -129,7 +129,7 @@
 <body>
 
 <header>
-  <span class="logo">SnipClip</span>
+  <span class="logo">Clipper</span>
   <nav><a href="terms.html">Terms of Use</a></nav>
 </header>
 
@@ -139,10 +139,10 @@
   <p class="meta">Last updated: May 18, 2026</p>
 
   <div class="highlight-box">
-    <p><strong>Zero-knowledge design:</strong> SnipClip encrypts all clipboard data on your device before syncing. Our servers store only ciphertext — we are technically unable to read your clipboard content.</p>
+    <p><strong>Zero-knowledge design:</strong> Clipper encrypts all clipboard data on your device before syncing. Our servers store only ciphertext — we are technically unable to read your clipboard content.</p>
   </div>
 
-  <p>SnipClip ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you use the SnipClip application on iOS and any other supported platforms.</p>
+  <p>Clipper ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you use the Clipper application on iOS and any other supported platforms.</p>
 
   <h2>1. Information We Collect</h2>
   <p>We collect only what is necessary to deliver the service:</p>
@@ -164,7 +164,7 @@
   </ul>
 
   <h2>3. End-to-End Encryption Architecture</h2>
-  <p>SnipClip uses a two-layer key hierarchy to ensure that only you can read your clipboard data:</p>
+  <p>Clipper uses a two-layer key hierarchy to ensure that only you can read your clipboard data:</p>
   <ul>
     <li><strong>Key Encryption Key (KEK):</strong> Derived from your PIN and email using PBKDF2-SHA256 with 300,000 iterations and a unique per-account salt. The KEK is never sent to or stored on our servers.</li>
     <li><strong>Data Encryption Key (DEK):</strong> A random AES-256 key generated on your device. The DEK is wrapped (encrypted) with your KEK using AES-256-GCM and stored on our server — but only in its encrypted form. We cannot unwrap it.</li>
@@ -174,7 +174,7 @@
   <p>Because the KEK is derived entirely on your device and never transmitted, a breach of our servers would expose only data that is cryptographically impossible to decrypt without your PIN and email.</p>
 
   <h2>4. Cross-Platform Sync</h2>
-  <p>SnipClip supports cross-platform clipboard synchronization. When you sign in on a new device, you re-derive your KEK locally (using your PIN and email), download the encrypted DEK from our server, unwrap it on-device, and use it to decrypt your history. The sync process never exposes your plaintext data to our infrastructure.</p>
+  <p>Clipper supports cross-platform clipboard synchronization. When you sign in on a new device, you re-derive your KEK locally (using your PIN and email), download the encrypted DEK from our server, unwrap it on-device, and use it to decrypt your history. The sync process never exposes your plaintext data to our infrastructure.</p>
 
   <h2>5. Data Storage and Security</h2>
   <p>Encrypted data is stored on servers hosted in a secure cloud environment. We apply industry-standard safeguards including HTTPS/TLS for all data in transit, access controls, and regular security reviews. However, no system is 100% immune to breach — our zero-knowledge design ensures that even a worst-case server compromise cannot expose your plaintext clipboard content.</p>
@@ -190,7 +190,7 @@
   <p>We do not sell, rent, or share your data with third-party advertising networks or data brokers.</p>
 
   <h2>8. Children's Privacy</h2>
-  <p>SnipClip is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately and we will delete it.</p>
+  <p>Clipper is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately and we will delete it.</p>
 
   <h2>9. Your Rights</h2>
   <p>Depending on your jurisdiction, you may have the right to:</p>
@@ -204,7 +204,7 @@
   <p>To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
 
   <h2>10. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date at the top. Continued use of SnipClip after changes take effect constitutes your acceptance of the revised policy.</p>
+  <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last updated" date at the top. Continued use of Clipper after changes take effect constitutes your acceptance of the revised policy.</p>
 
   <h2>11. Contact Us</h2>
   <div class="contact-box">
@@ -215,7 +215,7 @@
 </main>
 
 <footer>
-  <p>© 2026 SnipClip · OPC</p>
+  <p>© 2026 Clipper · OPC</p>
   <p><a href="terms.html">Terms of Use</a></p>
 </footer>
 
