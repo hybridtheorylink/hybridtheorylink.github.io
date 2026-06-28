@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miner Support</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    .note { background:#f6f6f6; padding:12px 14px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <h1>Miner Support</h1>
+  <div class="meta">Last updated: 2026-06-28</div>
+
+  <p>Need help with Miner: Photo &amp; Media Player? Contact us and we'll respond as soon as possible.</p>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>App Overview</h2>
+    <p>Miner: Photo &amp; Media Player puts your personal media library beautifully on the big screen. It is the official Apple TV (and iOS) companion for Miner, the self-hosted media server that runs on your own computer or NAS. Connect once over your home network and instantly browse your entire photo and video collection &mdash; organized by day, by album, or by folder &mdash; with no cloud, no subscription, and no uploads. Your memories stay on your hardware, on your network, under your control.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Home</strong> &mdash; A time-machine view of every memory, grouped by date with smart pagination so even libraries with hundreds of thousands of items scroll smoothly.</li>
+      <li><strong>Favorites</strong> &mdash; Star the photos and videos you love. Filter by All, Photos, or Videos for quick access.</li>
+      <li><strong>Albums</strong> &mdash; Curated collections with beautiful stacked-card previews. Build albums on any Miner client and they show up everywhere instantly.</li>
+      <li><strong>Folders</strong> &mdash; Browse your library exactly as it lives on disk. Great for power users who organize by year, trip, project, or shoot.</li>
+      <li><strong>Full-Screen Viewer</strong> &mdash; Lean back and let photos fill the screen, or hit play on any video with AVKit-powered smooth playback, scrubbing, and resume-where-you-left-off.</li>
+      <li><strong>Multi-Library Support</strong> &mdash; Run separate libraries for Family, Travel, Work, or anything else. Switch between them right from the Home tab.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Requirements</h2>
+    <ul>
+      <li>Apple TV: tvOS 17 or later (native SwiftUI, optimized for 1080p and 4K).</li>
+      <li>iPhone &amp; iPad: iOS 17 or later.</li>
+      <li>A running Miner server on your local network. Miner is a free, open, single-binary media server you can install on macOS, Linux, or a NAS in minutes.</li>
+      <li>Your device and the Miner server must be on the same home network (or connected to it) for streaming.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Getting Started</h2>
+    <ol style="padding-left:18px;">
+      <li>Install and run the Miner server on your computer or NAS. Make a note of its IP address and port.</li>
+      <li>Open Miner on your Apple TV or iOS device.</li>
+      <li>Enter your server's IP address and port, then sign in with the account set on your Miner server.</li>
+      <li>Allow Local Network access when prompted. Your connection is saved for next time.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Can't find or connect to my server:</strong> Confirm your Apple TV / iPhone / iPad and the Miner server are on the same Wi-Fi or wired network. Double-check the IP address and port you entered. If the server machine has a firewall, make sure the Miner port is open for local traffic.</li>
+      <li><strong>"Local Network" permission prompt:</strong> Miner needs Local Network access to reach your server. If you declined it, open iOS Settings &rsaquo; Privacy &amp; Security &rsaquo; Local Network and enable it for Miner (on Apple TV, check Settings &rsaquo; General &rsaquo; Privacy &rsaquo; Local Network).</li>
+      <li><strong>Login fails:</strong> The only login is the one on your Miner server. Use the username and password configured there. If you forgot it, reset the credentials on the server side.</li>
+      <li><strong>Thumbnails or videos won't load:</strong> The Miner server uses FFmpeg for scanning, thumbnailing, and transcoding. Make sure FFmpeg is installed on the server and that a scan has completed. Large libraries take time to index on first run.</li>
+      <li><strong>Library is empty:</strong> Verify that the server's library folders contain supported photos and videos, and that a scan has finished. You can trigger a rescan from the server.</li>
+      <li><strong>Video playback stutters:</strong> Streaming quality depends on your server's CPU (for transcoding) and your local network speed. For high-bitrate files, a wired network connection is recommended.</li>
+      <li><strong>Albums aren't showing:</strong> Albums are created on a Miner client and synced through your server. Make sure your server is running and reachable, then pull to refresh or restart the app.</li>
+      <li><strong>Siri Remote focus feels off:</strong> Press Menu to go back one level. If a card seems stuck, move focus away and back, or relaunch the app.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Privacy &amp; Data</h2>
+    <p>Nothing leaves your home network. Miner talks directly to your server &mdash; no analytics, no third parties, and no accounts to create with us. Your server connection details are stored only on your device. For full details, see the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </div>
+
+  <div class="section note">
+    <strong>Tip:</strong> When you contact support, please include your device model, tvOS/iOS version, your server OS, and the IP address and port you entered. A short description of what you were doing when the issue happened helps us reproduce and fix it faster.
+  </div>
+</body>
+</html>
