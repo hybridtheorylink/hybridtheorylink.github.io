@@ -18,7 +18,7 @@
   <nav><a href="support.html">Support</a><a href="terms.html">Terms</a></nav>
   <article>
     <h1>RemoteDesk Privacy Policy</h1>
-    <p class="meta">Last updated: August 22, 2026</p>
+    <p class="meta">Last updated: August 24, 2026</p>
     <p>RemoteDesk lets you control a Mac from iPhone, iPad, or another Mac. It works without an account and keeps remote sessions direct between devices.</p>
 
     <h2>Information We Collect</h2>
@@ -27,8 +27,12 @@
       <li><strong>Support messages:</strong> If you email us, we receive the information you choose to include and use it to answer your request.</li>
     </ul>
 
-    <h2>Remote Session Data</h2>
-    <p>Remote screen video, mouse and touch input, keyboard input, and connection traffic travel directly between the devices you connect. We do not route, record, or store this content on our servers.</p>
+    <h2>Screen Recording Data</h2>
+    <p>RemoteDesk uses Apple’s ScreenCaptureKit only after you start the Host feature and grant Screen Recording permission. It captures the pixels and pointer visible on the display you select. Screen audio, microphone audio, and camera data are not captured.</p>
+    <p>The captured display is used only to provide a live remote-screen stream to devices that you explicitly connect and authorize. Because the entire selected display is captured, the stream may include applications, documents, notifications, and other content visible on that display.</p>
+
+    <h2>Sharing and Disclosure</h2>
+    <p>Screen recording data is transmitted directly over an encrypted connection to the device or devices you explicitly connect. We do not receive, route, sell, or share screen recording data through our servers, analytics service, or third-party SDKs. A connected device is able to view the selected display as part of the remote session.</p>
 
     <h2>Data Stored on Your Device</h2>
     <p>Saved host names, addresses, ports, pairing codes, certificate pins, preferences, and recent remote-screen thumbnails are stored locally. They are not uploaded to us. You can remove saved connections in the app and remove remaining local data by uninstalling the app.</p>
@@ -43,7 +47,9 @@
     <h2>How We Use and Share Data</h2>
     <p>Install and purchase events are used to understand adoption and paid-plan activation. We do not sell personal information, use advertising SDKs, track you across other companies’ apps or websites, or share data with data brokers. The app also contacts Apple for StoreKit purchases and our service to load a list of other apps by this developer.</p>
 
-    <h2>Retention and Security</h2>
+    <h2>Storage, Retention, and Security</h2>
+    <p>On the Host, raw and encoded screen frames are processed temporarily in memory. Up to four recent encoded frames per connected device may be held in memory for network packet retransmission. These frames are replaced as new frames arrive and are discarded when the stream or connection ends.</p>
+    <p>On the controlling device, RemoteDesk may store one recent remote-screen thumbnail for each saved connection in the app’s local cache. The thumbnail is used only for the saved-connections interface and is never uploaded to us. It is overwritten by a newer thumbnail and is removed when the app is uninstalled or the operating system clears the cache.</p>
     <p>Event records are kept only as reasonably needed for aggregate product analytics. Support messages are kept as needed to respond and resolve issues. Remote connections use encrypted transport and certificate pinning, but no method of transmission or storage is completely secure.</p>
 
     <h2>Children</h2>
