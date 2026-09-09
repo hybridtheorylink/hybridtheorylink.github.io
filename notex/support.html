@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notex setup, troubleshooting, and support.">
+  <title>Notex Support</title>
+  <style>
+    :root { color-scheme:light dark; --bg:#f5f7fb; --card:#fff; --text:#152033; --muted:#5c687a; --line:#dde3ec; --link:#2563eb; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#9da7b3; --line:#30363d; --link:#79a9ff; } }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:780px; margin:auto; padding:32px 18px 56px; } article { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:clamp(22px,5vw,42px); }
+    h1 { margin:0 0 4px; font-size:clamp(30px,6vw,42px); } h2 { margin:28px 0 8px; font-size:20px; } h3 { margin:18px 0 4px; font-size:17px; } p,ul,ol { margin:8px 0; } ul,ol { padding-left:22px; }
+    .meta { color:var(--muted); } a { color:var(--link); } nav { margin-bottom:18px; } nav a { margin-right:16px; }
+  </style>
+</head>
+<body><main>
+  <nav><a href="index.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <article>
+    <h1>Notex Support</h1>
+    <p class="meta">Last updated: September 9, 2026</p>
+    <p>Notex is a local-first Markdown notes app for iPhone and iPad.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:hswillg@gmail.com?subject=Notex%20Support">hswillg@gmail.com</a>. Include the app version, device model, OS version, workspace mode, and a short description of the issue. Do not send private notes, API keys, pairing tokens, or passwords.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>iOS or iPadOS 17 or later</li>
+      <li>An Apple Account with iCloud Drive enabled for iCloud sync</li>
+      <li>Local Network permission and a reachable NoteX Mac for Mac connection mode</li>
+    </ul>
+
+    <h2>Quick start</h2>
+    <ol>
+      <li>Open Notex and choose a local or iCloud workspace.</li>
+      <li>Create a memo or note. Your workspace is stored as ordinary Markdown files.</li>
+      <li>Use folders and nested pages to organize notes.</li>
+      <li>Add date properties to see records in Calendar.</li>
+      <li>Optionally connect to a NoteX Mac from Settings using the pairing code shown on the Mac.</li>
+    </ol>
+
+    <h2>Troubleshooting</h2>
+    <h3>iCloud notes are missing or still downloading</h3>
+    <p>Confirm iCloud Drive is enabled for Notex, keep the device online, open Files to check the Notex folder, and refresh the workspace. Large attachments and placeholder files may need time to download.</p>
+
+    <h3>The Mac does not appear</h3>
+    <p>Keep both devices on the same local network, enable Local Network access for Notex, and confirm NoteX is open on the Mac. You can enter the address and port shown by the Mac manually.</p>
+
+    <h3>Pairing or connection fails</h3>
+    <p>Generate a new six-digit pairing code and try again. If the Mac was reinstalled or its certificate changed, remove the saved connection and pair again only after confirming the Mac is trusted.</p>
+
+    <h3>Dictation does not work</h3>
+    <p>Enable Microphone and Speech Recognition access in system settings. Apple speech recognition may depend on device and language availability. For Doubao, verify your own API key and resource ID.</p>
+
+    <h3>A purchase is missing</h3>
+    <p>Open the Pro screen and choose Restore Purchases. Confirm the device uses the Apple Account that made the purchase. Manage monthly or yearly subscriptions in Apple Account subscription settings.</p>
+
+    <h3>A file conflict appears</h3>
+    <p>Notex avoids silently overwriting externally changed files. Compare the versions, keep the content you need, and maintain a separate backup for important workspaces.</p>
+
+    <h2>Privacy and terms</h2>
+    <p>See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </article>
+</main></body>
+</html>

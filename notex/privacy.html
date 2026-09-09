@@ -3,69 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NoteX Privacy Policy</title>
+  <meta name="description" content="Notex privacy policy.">
+  <title>Notex Privacy Policy</title>
   <style>
-    :root { color-scheme: light; }
-    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; }
-    h1,h2 { margin: 0.8em 0 0.4em; }
-    .meta { color:#555; font-size: 0.95em; }
-    ul { padding-left: 18px; }
-    .section { margin-top: 18px; }
+    :root { color-scheme:light dark; --bg:#f5f7fb; --card:#fff; --text:#152033; --muted:#5c687a; --line:#dde3ec; --link:#2563eb; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#9da7b3; --line:#30363d; --link:#79a9ff; } }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:780px; margin:auto; padding:32px 18px 56px; } article { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:clamp(22px,5vw,42px); }
+    h1 { margin:0 0 4px; font-size:clamp(30px,6vw,42px); } h2 { margin:28px 0 8px; font-size:20px; } p,ul { margin:8px 0; } ul { padding-left:22px; }
+    .meta { color:var(--muted); } a { color:var(--link); } nav { margin-bottom:18px; } nav a { margin-right:16px; }
   </style>
 </head>
-<body>
-  <h1>NoteX Privacy Policy</h1>
-  <div class="meta">Last updated: September 5, 2026</div>
+<body><main>
+  <nav><a href="index.html">About</a><a href="support.html">Support</a><a href="terms.html">Terms</a></nav>
+  <article>
+    <h1>Notex Privacy Policy</h1>
+    <p class="meta">Last updated: September 9, 2026</p>
+    <p>Notex is a local-first notes app. We do not sell personal information, show third-party ads, or use collected data to track you across other companies’ apps or websites.</p>
 
-  <p>NoteX is a notes client that connects to a NoteX server you configure. We minimize data collection and do not use your data for advertising or cross-app tracking.</p>
+    <h2>Your notes and files</h2>
+    <p>Your notes, databases, photos, audio files, and attachments are stored in the workspace you choose. This may be local app storage, an iCloud Drive folder managed through your Apple Account, another folder you select, or a NoteX server you configure. We do not receive this content unless you use a service operated by us or intentionally send it to support.</p>
+    <p>When you connect to your own Mac or NoteX server, workspace content travels directly between your devices and that server. You control the server and are responsible for its security and retention. iCloud data is handled by Apple under your Apple Account settings and Apple’s privacy practices.</p>
 
-  <div class="section">
-    <h2>Information Stored on Your Device</h2>
-    <p>NoteX stores app preferences such as your server address, memo folder, selected speech-recognition engine, and any speech-service API key you enter. These preferences remain in the app&rsquo;s local storage unless you remove the app or change them.</p>
-  </div>
+    <h2>Information stored on your device</h2>
+    <p>Notex stores settings such as your workspace choice, server address, pinned server certificate, authentication token, display preferences, speech-recognition choice, and any Doubao API credentials you enter. Pairing tokens are stored in Keychain. Removing a workspace or uninstalling the app removes app-managed local information subject to normal operating-system and backup behavior; files in a folder or iCloud Drive remain until you delete them.</p>
 
-  <div class="section">
-    <h2>Your NoteX Server</h2>
-    <p>The app sends requests to the NoteX server address you configure. Notes, AI prompts and responses, terminal commands and output, and photos or other attachments you choose may be transmitted to and stored by that server. You control the server and are responsible for its security, availability, and privacy practices. We do not receive this content unless you configure a server operated by us or send the content to us for support.</p>
-  </div>
+    <h2>Limited analytics</h2>
+    <p>On first launch, Notex sends us a one-time installation event. When Pro access first becomes active for a plan, it sends a one-time purchase event. These events can include the selected plan, an installation or vendor identifier, device model, operating-system version, app version and build, language, and region. We use this information to measure installations, understand device compatibility, and confirm which plans are used. It is not used for advertising or cross-company tracking.</p>
 
-  <div class="section">
-    <h2>Speech Recognition</h2>
+    <h2>Speech recognition</h2>
     <ul>
-      <li><strong>Apple speech recognition:</strong> If you select the system engine and use dictation, audio and speech data are handled by Apple according to your device settings and Apple&rsquo;s privacy practices.</li>
-      <li><strong>Doubao speech recognition:</strong> If you configure and select Doubao, recorded audio is sent directly to the Doubao speech-recognition service for transcription. Your API key is included to authenticate that request.</li>
+      <li><strong>Apple speech recognition:</strong> if selected, audio and speech data are handled by Apple according to your device settings and Apple’s privacy practices.</li>
+      <li><strong>Doubao speech recognition:</strong> if you configure and select Doubao, microphone audio is sent directly to Doubao for transcription using the API credentials you provide.</li>
     </ul>
-    <p>NoteX accesses the microphone only after you grant permission and start a voice-input action.</p>
-  </div>
+    <p>The microphone is accessed only after permission is granted and you start voice input. Transcribed text is saved to your chosen workspace.</p>
 
-  <div class="section">
-    <h2>Photos, Camera, and Files</h2>
-    <p>With your permission, NoteX can access photos you select or the camera when you choose to add an image. Selected content is sent to your configured NoteX server as an attachment. The app does not access this content for advertising or tracking.</p>
-  </div>
+    <h2>Photos, camera, local network, and calendars</h2>
+    <p>Notex uses photos or the camera only when you choose an image. Local Network access is used to discover and connect to a NoteX Mac. Public calendar subscription URLs are fetched to display their events; subscription settings are stored with your workspace. These permissions are not used for advertising or tracking.</p>
 
-  <div class="section">
-    <h2>Recommendations and Support</h2>
-    <p>When you open More Apps, NoteX requests a list of apps from our recommendation service and sends the NoteX App Store ID only to exclude NoteX from the results. Standard network information such as an IP address may be processed by the hosting provider as part of delivering the request. If you contact support by email, we receive the information you choose to include and use it to answer your request.</p>
-  </div>
+    <h2>Recommendations and support</h2>
+    <p>When you open More Apps, Notex requests a list from our recommendation service and sends the Notex App Store ID so this app can be excluded. The service and its hosting providers may process standard network data such as IP address and request time. If you email support, we receive the information you choose to include, along with device and app details prefilled in the draft email.</p>
 
-  <div class="section">
-    <h2>Data Sharing and Retention</h2>
-    <p>We do not sell your personal information. Data sent to services you choose, including your NoteX server, Apple, and Doubao, is governed by those services&rsquo; terms and policies. Support correspondence is retained only as reasonably necessary to respond, maintain support records, and meet legal obligations.</p>
-  </div>
+    <h2>Sharing, security, and retention</h2>
+    <p>Data is shared only with processors needed for the features described above, services you choose, and authorities when legally required. Network traffic uses operating-system transport security, and paired NoteX connections pin the server certificate. No method of storage or transmission is completely secure.</p>
+    <p>One-time event records and support correspondence are kept only as reasonably necessary for analytics, support, security, and legal obligations. Third-party services retain data under their own policies. You can stop future optional processing by not using the related feature.</p>
 
-  <div class="section">
-    <h2>Children&rsquo;s Privacy</h2>
-    <p>NoteX is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
-  </div>
+    <h2>Your choices</h2>
+    <p>You can revoke microphone, speech, photo, camera, and local-network access in system settings; remove Doubao credentials in Notex; disconnect a server; delete local workspace files; or manage iCloud files through Files or Finder. To ask about access or deletion of data held by us, email the address below. We may need information sufficient to locate the relevant record.</p>
 
-  <div class="section">
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy from time to time. The date above identifies the latest version.</p>
-  </div>
+    <h2>Children</h2>
+    <p>Notex is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>For privacy questions, email <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a>.</p>
-  </div>
-</body>
+    <h2>Changes and contact</h2>
+    <p>We may update this policy and will revise the date above. Questions or privacy requests: <a href="mailto:hswillg@gmail.com?subject=Notex%20Privacy">hswillg@gmail.com</a>.</p>
+  </article>
+</main></body>
 </html>
