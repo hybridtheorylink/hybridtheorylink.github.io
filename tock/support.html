@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tock Support</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; max-width: 720px; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    .note { background:#f6f6f6; padding:12px 14px; border-radius:8px; }
+    a { color: #0d7dff; }
+  </style>
+</head>
+<body>
+  <h1>Tock Support</h1>
+  <div class="meta">Last updated: September 15, 2026</div>
+
+  <p>Need help with Tock? Contact us and we'll respond as soon as possible.</p>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>App Overview</h2>
+    <p>Tock is a countdown app that keeps nagging until you answer. Set a length or pick a moment, and when time is up it fires a time-sensitive reminder with Done, Snooze 5 min, and Snooze 10 min — then comes back on a cadence until one of them is tapped. Everything is stored on your device; there is no account and no sync.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Countdowns two ways: a length (COUNTDOWN) or a date and time (PICK A TIME)</li>
+      <li>Repeat rules for timed countdowns: once, pick days, monthly, yearly</li>
+      <li>Reminders that repeat until answered — global cadence with a per-countdown override, no "gives up on its own"</li>
+      <li>System alarms (iOS 26+): a countdown can ring like the Clock app, through silent mode and Focus</li>
+      <li>Live Activity on the Lock Screen and Dynamic Island, per countdown or on by default</li>
+      <li>Quick Start widget with your saved types — buttons start countdowns without opening the app</li>
+      <li>A NOW queue that holds the screen until each elapsed countdown is answered or snoozed</li>
+      <li>A Done tab that archives finished countdowns instead of deleting them, with restore</li>
+      <li>Optional floating countdown bar (Picture in Picture)</li>
+      <li>Works fully offline — your data stays on your device</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Requirements</h2>
+    <ul>
+      <li>iOS 17 or later</li>
+      <li>System alarms require iOS 26 or later</li>
+      <li>Notifications must be allowed for reminders to be delivered; system alarms also need the alarm permission (asked the first time a countdown wants one)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Reminders aren't arriving:</strong> Open Settings &rsaquo; Notifications &rsaquo; Tock and make sure notifications are allowed, and check that a Focus mode or silent mode isn't silencing them. If you need a countdown to ring no matter what, turn on its System alarm switch (iOS 26+) — a system alarm rings through silent mode and Focus.</li>
+      <li><strong>My reminder never fired:</strong> iOS keeps only the 64 soonest pending notifications per app, and Tock budgets its 20 system alarms soonest-first, so a long list of far-future countdowns may not all be pre-armed. Each countdown is scheduled as its time approaches; open the app to force a re-sync at any time.</li>
+      <li><strong>The system alarm toggle is greyed out:</strong> Alarm permission was denied. Re-enable it in Settings &rsaquo; Tock &rsaquo; Alarms. Until then the countdown automatically falls back to notifications — it is never left silent.</li>
+      <li><strong>Live Activity isn't showing:</strong> Check Settings &rsaquo; Tock &rsaquo; Live Activities, and the per-countdown switch in the detail sheet. The "Live Activity by default" setting applies to new countdowns started in the app.</li>
+      <li><strong>I tapped a widget button and nothing happened:</strong> The countdown did start — the tile shows the running countdown for about a minute to confirm, and the Live Activity appears without opening the app. A widget-started countdown that wants a system alarm gets one the next time the app becomes active.</li>
+      <li><strong>A repeating countdown disappeared from NOW:</strong> That is by design — a repeating countdown rolls to its next occurrence when it fires, so it gets exactly one alert and never queues.</li>
+      <li><strong>I deleted a countdown by mistake:</strong> Deleting is immediate and there is no trash — but marking done instead moves it to the Done tab, where it can be restored. Data is local only, so there is no server copy to recover from.</li>
+      <li><strong>Reminders stopped after I restored a backup or reinstalled:</strong> Tock stores everything locally; uninstalling removes the data. There is no cloud sync to pull from.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Privacy &amp; Data</h2>
+    <p>Tock stores all your countdowns, types, and settings locally on your device. There is no account, no cloud sync, and no third-party analytics. For full details, see the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </div>
+
+  <div class="section note">
+    <strong>Tip:</strong> When you contact support, please include your iOS version, device model, and a short description of what you were doing when the issue happened. That helps us reproduce and fix it faster.
+  </div>
+</body>
+</html>
