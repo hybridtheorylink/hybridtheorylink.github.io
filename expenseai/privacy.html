@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExpenseAI Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; max-width: 720px; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    a { color: #0d7dff; }
+  </style>
+</head>
+<body>
+  <h1>ExpenseAI Privacy Policy</h1>
+  <div class="meta">Last updated: September 19, 2026</div>
+
+  <p>ExpenseAI is an expense logging app. You log an expense by saying it out loud, typing one line, or snapping a receipt. We designed ExpenseAI to work without an account and to keep your data on your device.</p>
+
+  <div class="section">
+    <h2>Data We Collect</h2>
+    <p>ExpenseAI minimizes data collection. By default, everything you log never leaves your device.</p>
+    <ul>
+      <li><strong>On-Device Data:</strong> Your expenses (titles, amounts, categories, dates, notes, receipt photos), your custom categories, pay-cycle rule, currency, and other preferences are saved locally on your device in iOS storage. This data is not transmitted to us. There is no account and no cloud sync.</li>
+      <li><strong>Voice Input:</strong> When you hold the input bar and speak, your voice is transcribed with on-device speech recognition. Recognition is required to run on the device; your audio is not sent to us.</li>
+      <li><strong>Receipts:</strong> Receipt photos are read with on-device text recognition (Vision OCR). The photo itself stays on your device and is stored with the entry as your own record. In the released app, photos are never uploaded.</li>
+      <li><strong>AI Parsing (default, on-device):</strong> By default, the text you spoke, typed, or scanned off a receipt is parsed by Apple Intelligence on your device. In this mode, an expense's content never leaves your iPhone.</li>
+      <li><strong>AI Parsing (optional, cloud):</strong> You can choose a cloud provider (OpenAI or Qwen) in Settings and enter your own API key. Only if you make that choice — after an explicit confirmation — is the text of what you said, typed, or scanned off a receipt sent to that provider's servers to be parsed. Even then, only text is sent: receipt photos are read on your device first, and the photo itself is not uploaded. Requests are authenticated with your own API key and billed to your own account with that provider.</li>
+      <li><strong>API Keys:</strong> If you enter a cloud provider API key, it is saved in the iOS Keychain on your device only. It is set to "this device only" — it is not included in device backups and does not migrate to a new phone. It is sent only to the provider it belongs to, as authentication for your own requests.</li>
+      <li><strong>First-Launch Analytics:</strong> Once per installation, ExpenseAI sends a first-launch event to our service. It includes your region and language settings, app version and build, device model, iOS version, and Identifier for Vendor (IDFV). We use this information to measure unique installations and understand app and device compatibility. It is not used for advertising or tracking across other companies' apps or websites.</li>
+      <li><strong>More Apps List:</strong> When you open the "More Apps" screen, ExpenseAI requests a list of our other apps from our server. The request contains only a page number and our own App Store ID — no identifiers, no personal data. Our server may keep standard request logs (such as IP address) as part of delivering the response.</li>
+      <li><strong>Diagnostics (optional):</strong> If you choose to contact support, the email may include your device model, system version, and app version. We only use this to respond to your request.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Data We Do Not Collect</h2>
+    <ul>
+      <li>We do not create user accounts.</li>
+      <li>We do not collect names, emails (unless you contact support), or phone numbers.</li>
+      <li>We do not track your activity across other companies' apps or websites.</li>
+      <li>We do not include third-party analytics, advertising, or tracking SDKs.</li>
+      <li>We do not have access to your expenses, your receipt photos, or your cloud AI usage — those stay on your device or between you and the AI provider you chose.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Microphone &amp; Speech Recognition:</strong> Optional. Used to turn what you say into expense text with on-device recognition. You can decline and use typing or receipts instead.</li>
+      <li><strong>Camera:</strong> Optional. Used to snap a receipt. The photo is processed on your device.</li>
+      <li><strong>Photo Library:</strong> Optional. Used to pick an existing receipt photo. The photo is processed on your device.</li>
+    </ul>
+    <p>All permissions can be revoked at any time in iOS Settings › ExpenseAI.</p>
+  </div>
+
+  <div class="section">
+    <h2>Third-Party AI Services</h2>
+    <p>If you enable a cloud AI provider, the text you submit for parsing is processed by that provider (for example OpenAI or Alibaba's DashScope for Qwen) under their terms and privacy policy, using your own API key. We do not see those requests. To stop sending any data, switch the Model provider setting back to Apple Intelligence (the default).</p>
+  </div>
+
+  <div class="section">
+    <h2>Data Sharing</h2>
+    <p>We do not sell your data and we do not share your expenses with anyone. ExpenseAI sends the first-launch analytics event and More Apps request described above. These requests go to services operated for the developer and are not used for third-party advertising or cross-app tracking.</p>
+  </div>
+
+  <div class="section">
+    <h2>Data Retention &amp; Deletion</h2>
+    <p>Your expenses, photos, and settings remain on your device until you delete them in the app or uninstall ExpenseAI. Uninstalling the app removes local data, so we recommend using the CSV export in Settings to move your ledger to a new phone. We retain first-launch analytics and standard server logs only as long as reasonably necessary for aggregate app analytics, security, and service operation. To ask about deletion of server-held data, contact us using the address below; because ExpenseAI has no account, we may need information such as your IDFV to identify a record.</p>
+  </div>
+
+  <div class="section">
+    <h2>Children's Privacy</h2>
+    <p>ExpenseAI is not directed to children under 13, and we do not knowingly collect data from children.</p>
+  </div>
+
+  <div class="section">
+    <h2>Changes to This Policy</h2>
+    <p>If we make changes, we will update this page with a new "Last updated" date.</p>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>For privacy questions, contact: <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+  </div>
+
+  <p><a href="terms.html">Terms of Use</a></p>
+</body>
+</html>
