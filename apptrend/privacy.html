@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AppTrend Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; max-width: 720px; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    a { color: #0d7dff; }
+  </style>
+</head>
+<body>
+  <h1>AppTrend Privacy Policy</h1>
+  <div class="meta">Last updated: September 20, 2026</div>
+
+  <p>AppTrend is a sales and trends dashboard for App Store Connect. It runs entirely with your own App Store Connect API key, keeps your metrics on your device, and contains no third-party analytics, advertising, or tracking SDKs.</p>
+
+  <div class="section">
+    <h2>Data We Collect</h2>
+    <p>AppTrend minimizes data collection. Almost everything the app touches stays on your device.</p>
+    <ul>
+      <li><strong>Your App Store Connect credentials:</strong> When you link an account, AppTrend stores the issuer ID, key ID, and vendor number in the app's local settings on your device. The .p8 private key itself is stored only in the iOS Keychain, never in plain files or in the app's settings storage. When you disconnect the account, the Keychain entry is deleted immediately.</li>
+      <li><strong>Your sales reports:</strong> AppTrend uses your own API key to call the official App Store Connect API (the app list and daily sales report endpoints) and download your account's sales and trends data. The reports are processed and cached on your device only. They are never uploaded to any server operated by us or any third party.</li>
+      <li><strong>App icons:</strong> AppTrend downloads app icons from Apple's public App Store lookup endpoint (itunes.apple.com) so your dashboard shows real artwork. The request contains only the App ID of each app on your account — no identifiers, no personal data.</li>
+      <li><strong>Diagnostics (optional):</strong> If you choose to contact support by email, include your device model, system version, and app version so we can respond effectively. We use this information only to answer your request.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Data We Do Not Collect</h2>
+    <ul>
+      <li>We do not create user accounts and do not require sign-up.</li>
+      <li>We do not collect names, emails (unless you contact support), or phone numbers.</li>
+      <li>We do not include third-party analytics, advertising, or tracking SDKs.</li>
+      <li>We do not track your activity across other companies' apps or websites.</li>
+      <li>We do not operate any server that receives your metrics, credentials, or usage behavior.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Sample Data</h2>
+    <p>Before you link a real API key, AppTrend displays a clearly labeled sample account with synthesized numbers so you can explore the interface. Sample data is generated on your device and involves no network request to Apple. Screens showing sample data are marked accordingly.</p>
+  </div>
+
+  <div class="section">
+    <h2>Storage &amp; Security</h2>
+    <ul>
+      <li>The .p8 private key is stored in the iOS Keychain, which is encrypted by the system.</li>
+      <li>Cached metrics and downloaded icons are stored only in the app's local storage on your device.</li>
+      <li>Disconnecting the account removes the Keychain entry; downloaded metrics remain available offline until you clear the local cache from Settings.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Currency Conversion</h2>
+    <p>AppTrend can display proceeds in a currency of your choice using built-in fixed reference exchange rates. These conversions are for presentation only; Apple's actual payouts are settled in each region's currency. No exchange-rate or financial data about you is transmitted anywhere.</p>
+  </div>
+
+  <div class="section">
+    <h2>Permissions</h2>
+    <p>AppTrend does not request access to your contacts, photos, location, microphone, or other personal data, and it does not send push notifications.</p>
+  </div>
+
+  <div class="section">
+    <h2>Children's Privacy</h2>
+    <p>AppTrend is a developer tool intended for adults who manage App Store Connect accounts. We do not knowingly collect personal information from children under 13.</p>
+  </div>
+
+  <div class="section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The "Last updated" date at the top will reflect the latest version.</p>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, email <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a>.</p>
+  </div>
+</body>
+</html>

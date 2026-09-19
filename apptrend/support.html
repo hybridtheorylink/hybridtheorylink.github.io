@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AppTrend Support</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; max-width: 720px; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    .note { background:#f6f6f6; padding:12px 14px; border-radius:8px; }
+    a { color: #0d7dff; }
+  </style>
+</head>
+<body>
+  <h1>AppTrend Support</h1>
+  <div class="meta">Last updated: September 20, 2026</div>
+
+  <p>Need help with AppTrend? Contact us and we'll respond as soon as possible.</p>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>App Overview</h2>
+    <p>AppTrend is a sales and trends dashboard for App Store Connect. Link your own App Store Connect API key and AppTrend pulls your account's daily sales reports directly from Apple's official API, then turns them into yesterday's key metrics, trend analysis, and earnings breakdowns — all cached on your device for offline viewing. Until you link a key, the app runs in a clearly labeled sample-data mode so you can explore everything first.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Daily metrics at a glance: downloads, first-time downloads, redownloads, updates, sales, estimated proceeds, paying transactions, average revenue per paying user, and download conversion</li>
+      <li>Trends across 7 / 30 / 90 / 365-day windows with day-over-day, period-over-period, or year-over-year comparison</li>
+      <li>Automatic insights: download spikes, conversion shifts, refund anomalies, and which app drove the change — rediscovered from your own numbers, no filler cards</li>
+      <li>Earnings and sales breakdowns by territory, download source, and product type</li>
+      <li>Every app on the account combined, or drill into a single app</li>
+      <li>Share a ready-to-paste text daily report, or export CSV for spreadsheets</li>
+      <li>Auto-sync in the background (interval configurable, manual sync anytime)</li>
+      <li>Interface in Chinese or English; appearance themes and accent colors; proceeds shown in your choice of settlement currency with fixed reference rates</li>
+      <li>API key stored only in the iOS Keychain; disconnect removes it; metrics stay viewable offline</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="section">
+      <h3>What do I need to connect my account?</h3>
+      <p>An App Store Connect API key (issuer ID, key ID, and the .p8 private key file) with a role that includes read access to Sales and Trends, plus your vendor number, which you can find in App Store Connect under Payments and Financial Reports. The key is stored only in your device's Keychain.</p>
+    </div>
+
+    <div class="section">
+      <h3>When does new data arrive?</h3>
+      <p>Apple publishes one daily sales report per day, usually the following morning. Yesterday's figures typically appear after that. A day with zero sales and zero downloads has no report file at all — that is normal Apple behavior, not a sync failure.</p>
+    </div>
+
+    <div class="section">
+      <h3>Why are the numbers different from Apple's finance reports?</h3>
+      <p>Daily sales reports are preliminary and can be adjusted later. Currency conversion uses built-in fixed reference rates for display only. For payouts and accounting, always rely on Apple's official financial reports.</p>
+    </div>
+
+    <div class="section">
+      <h3>What happens when I disconnect?</h3>
+      <p>The stored key is removed from your Keychain immediately. Metrics already downloaded stay on your device for offline viewing until you clear the local cache in Settings, and you can reconnect at any time.</p>
+    </div>
+
+    <div class="section">
+      <h3>The dashboard says "Sample Data". How do I see my real numbers?</h3>
+      <p>That badge means no real API key is linked yet. Open Settings and connect your App Store Connect account; the first sync backfills your report history automatically.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Sync fails with an authorization error:</strong> check that the key ID, issuer ID, and .p8 file all belong to the same API key, and that the key has not been revoked in App Store Connect.</li>
+      <li><strong>"Missing vendor number":</strong> the vendor number is separate from the API key — find it under Payments and Financial Reports and add it in Settings.</li>
+      <li><strong>Key missing after restoring a backup:</strong> Keychain items sometimes do not survive device transfers. Re-enter the .p8 key in Settings to relink.</li>
+      <li><strong>Charts feel stale:</strong> pull a manual sync from Settings, or check that auto-sync is enabled.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Privacy &amp; Terms</h2>
+    <p>See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </div>
+</body>
+</html>
