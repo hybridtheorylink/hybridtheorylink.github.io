@@ -10,13 +10,16 @@
     h1,h2 { margin: 0.8em 0 0.4em; }
     .meta { color:#555; font-size: 0.95em; }
     ul { padding-left: 18px; }
+    .provider { border:1px solid #ddd; border-radius:10px; padding:14px; margin:12px 0; }
+    .provider h3 { margin:0 0 8px; }
+    .provider p { margin:8px 0 0; }
     .section { margin-top: 18px; }
     a { color: #0d7dff; }
   </style>
 </head>
 <body>
   <h1>ExpenseAI Privacy Policy</h1>
-  <div class="meta">Last updated: September 19, 2026</div>
+  <div class="meta">Last updated: September 23, 2026</div>
 
   <p>ExpenseAI is an expense logging app. You log an expense by saying it out loud, typing one line, or snapping a receipt. We designed ExpenseAI to work without an account and to keep your data on your device.</p>
 
@@ -28,7 +31,7 @@
       <li><strong>Voice Input:</strong> When you hold the input bar and speak, your voice is transcribed with on-device speech recognition. Recognition is required to run on the device; your audio is not sent to us.</li>
       <li><strong>Receipts:</strong> Receipt photos are read with on-device text recognition (Vision OCR). The photo itself stays on your device and is stored with the entry as your own record. In the released app, photos are never uploaded.</li>
       <li><strong>AI Parsing (default, on-device):</strong> By default, the text you spoke, typed, or scanned off a receipt is parsed by Apple Intelligence on your device. In this mode, an expense's content never leaves your iPhone.</li>
-      <li><strong>AI Parsing (optional, cloud):</strong> You can choose a cloud provider (OpenAI or Qwen) in Settings and enter your own API key. Only if you make that choice — after an explicit confirmation — is the text of what you said, typed, or scanned off a receipt sent to that provider's servers to be parsed. Even then, only text is sent: receipt photos are read on your device first, and the photo itself is not uploaded. Requests are authenticated with your own API key and billed to your own account with that provider.</li>
+      <li><strong>AI Parsing (optional, cloud):</strong> You can choose OpenAI or Alibaba Cloud Model Studio (Qwen/DashScope) in Settings and enter your own API key. Before a provider is enabled, ExpenseAI shows a dedicated permission screen naming the recipient, server, exact data sent, purpose, and data that stays on your iPhone. Only after you tap “Agree &amp; Use” does ExpenseAI send the text you typed, text transcribed from your voice on-device, or text recognized from a receipt on-device to the selected provider to create an expense draft. Receipt photos, original audio, saved entries, totals, and statistics are not sent.</li>
       <li><strong>API Keys:</strong> If you enter a cloud provider API key, it is saved in the iOS Keychain on your device only. It is set to "this device only" — it is not included in device backups and does not migrate to a new phone. It is sent only to the provider it belongs to, as authentication for your own requests.</li>
       <li><strong>First-Launch Analytics:</strong> Once per installation, ExpenseAI sends a first-launch event to our service. It includes your region and language settings, app version and build, device model, iOS version, and Identifier for Vendor (IDFV). We use this information to measure unique installations and understand app and device compatibility. It is not used for advertising or tracking across other companies' apps or websites.</li>
       <li><strong>More Apps List:</strong> When you open the "More Apps" screen, ExpenseAI requests a list of our other apps from our server. The request contains only a page number and our own App Store ID — no identifiers, no personal data. Our server may keep standard request logs (such as IP address) as part of delivering the response.</li>
@@ -59,17 +62,31 @@
 
   <div class="section">
     <h2>Third-Party AI Services</h2>
-    <p>If you enable a cloud AI provider, the text you submit for parsing is processed by that provider (for example OpenAI or Alibaba's DashScope for Qwen) under their terms and privacy policy, using your own API key. We do not see those requests. To stop sending any data, switch the Model provider setting back to Apple Intelligence (the default).</p>
+    <p>Cloud AI is optional and off by default. Requests travel directly from your device to the provider you select; ExpenseAI's developer does not receive their contents or responses.</p>
+    <div class="provider">
+      <h3>OpenAI</h3>
+      <p><strong>Destination:</strong> <code>api.openai.com</code></p>
+      <p><strong>Data sent and how:</strong> Text you type, on-device voice transcription, or on-device receipt OCR text, plus your OpenAI API key as request authentication. Sent only after you select OpenAI and tap “Agree &amp; Use OpenAI.”</p>
+      <p><strong>Use:</strong> Process the submitted text and return an expense draft. See <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener noreferrer">OpenAI's API privacy information</a>.</p>
+    </div>
+    <div class="provider">
+      <h3>Alibaba Cloud Model Studio (Qwen/DashScope)</h3>
+      <p><strong>Destination:</strong> <code>dashscope.aliyuncs.com</code></p>
+      <p><strong>Data sent and how:</strong> Text you type, on-device voice transcription, or on-device receipt OCR text, plus your Alibaba Cloud API key as request authentication. Sent only after you select Qwen and tap “Agree &amp; Use Qwen.”</p>
+      <p><strong>Use:</strong> Process the submitted text and return an expense draft. See <a href="https://www.alibabacloud.com/help/en/legal/latest/privacy-policy" target="_blank" rel="noopener noreferrer">Alibaba Cloud's Privacy Policy</a>.</p>
+    </div>
+    <p>The selected provider processes these requests under the agreement and privacy terms associated with the API key you supply. These providers state that they apply technical and organizational safeguards to customer data. We require every third party with which ExpenseAI shares user data to provide the same or equivalent protection described in this policy and required by applicable App Store guidelines.</p>
+    <p>You can stop all future sharing at any time in Settings by choosing <strong>Revoke</strong> under Cloud AI permission. ExpenseAI immediately returns to Apple Intelligence and requires fresh permission before any cloud provider can be used again. You can also clear an API key in Settings. Requests already processed by a provider are subject to that provider's retention and deletion terms and controls; use the links above or your provider account to manage them.</p>
   </div>
 
   <div class="section">
     <h2>Data Sharing</h2>
-    <p>We do not sell your data and we do not share your expenses with anyone. ExpenseAI sends the first-launch analytics event and More Apps request described above. These requests go to services operated for the developer and are not used for third-party advertising or cross-app tracking.</p>
+    <p>We do not sell your data or use it for advertising or cross-app tracking. Expense text is shared with OpenAI or Alibaba Cloud only when you explicitly enable that provider as described above. ExpenseAI also sends the first-launch analytics event and More Apps request described above; those requests go to services operated for the developer and are not used for third-party advertising or cross-app tracking.</p>
   </div>
 
   <div class="section">
     <h2>Data Retention &amp; Deletion</h2>
-    <p>Your expenses, photos, and settings remain on your device until you delete them in the app or uninstall ExpenseAI. Uninstalling the app removes local data, so we recommend using the CSV export in Settings to move your ledger to a new phone. We retain first-launch analytics and standard server logs only as long as reasonably necessary for aggregate app analytics, security, and service operation. To ask about deletion of server-held data, contact us using the address below; because ExpenseAI has no account, we may need information such as your IDFV to identify a record.</p>
+    <p>Your expenses, photos, and settings remain on your device until you delete them in the app or uninstall ExpenseAI. Uninstalling the app removes local data, so we recommend using the CSV export in Settings to move your ledger to a new phone. Cloud AI requests are retained or deleted by the provider under the terms associated with your API account; ExpenseAI's developer does not receive or retain those requests. We retain first-launch analytics and standard server logs only as long as reasonably necessary for aggregate app analytics, security, and service operation. To ask about deletion of developer-held data, contact us using the address below; because ExpenseAI has no account, we may need information such as your IDFV to identify a record.</p>
   </div>
 
   <div class="section">
