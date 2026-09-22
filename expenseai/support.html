@@ -36,7 +36,7 @@
     <ul>
       <li>Three ways in: hold the input bar and speak, type a line, or add from camera / photo library / manual form</li>
       <li>AI parsing into a draft — amount, merchant, category, date — with a confirm screen before anything is saved</li>
-      <li>Receipts read with on-device OCR; the recognized original text is kept in the note so you can double-check the total</li>
+      <li>Receipts use on-device OCR by default; each cloud provider also offers an optional, separately authorized receipt-image mode</li>
       <li>One sentence can split into several entries (multi-entry mode, off by default)</li>
       <li>Pay-cycle timeline: your ledger runs from payday to payday (monthly / semi-monthly / biweekly / weekly), not calendar months</li>
       <li>Optional per-cycle budget: the home ratio bar turns into a budget strip once a payday is configured</li>
@@ -55,7 +55,7 @@
     <ul>
       <li>iOS 17 or later</li>
       <li>On-device AI parsing needs Apple Intelligence support; on other devices ExpenseAI falls back to an on-device rough read (amount by pattern, title from the first words) that you correct by hand</li>
-      <li>Cloud providers (OpenAI, Qwen) require your own API key and acknowledge that the text you submit is sent to that provider</li>
+      <li>Cloud providers (OpenAI, Qwen) require your own API key and explicit permission before text is sent; sending receipt images requires a second, separate permission</li>
       <li>Voice input needs microphone and speech recognition permissions; receipts need camera or photo access</li>
     </ul>
   </div>
@@ -64,7 +64,7 @@
     <h2>Troubleshooting</h2>
     <ul>
       <li><strong>Voice input doesn't transcribe:</strong> Check Settings › Privacy &amp; Security › Microphone and › Speech Recognition, and make sure both are on for ExpenseAI. Recognition runs on the device — airplane mode is fine on supported devices.</li>
-      <li><strong>A receipt reads wrong:</strong> Shoot the receipt flat, fill the frame, and avoid glare. The original recognized text is kept in the entry's note so you can compare it with the photo.</li>
+      <li><strong>A receipt reads wrong:</strong> Shoot the receipt flat, fill the frame, and avoid glare. In the default on-device OCR mode, recognized text is kept in the entry's note so you can compare it with the photo. Cloud image mode reads the selected image directly.</li>
       <li><strong>The AI got the amount or category wrong:</strong> Drafts are never auto-saved — fix it on the confirm screen before saving, or open the entry later to edit. A wrong date is a one-tap fix.</li>
       <li><strong>Stats look off:</strong> Statistics count expenses only; income has its own view at the top of the stats page. Also check your pay-cycle rule in Settings — a cycle like "25th of each month" shifts which entries belong to the current period.</li>
       <li><strong>Cloud parsing returns an auth error:</strong> The API key you entered was rejected by the provider. Re-enter it in Settings, and remember it is stored only on this device — a new phone means re-entering it.</li>
@@ -75,7 +75,7 @@
 
   <div class="section">
     <h2>Privacy &amp; Data</h2>
-    <p>ExpenseAI stores all your entries, receipt photos, and settings locally on your device. There is no account, no cloud sync, and no third-party analytics. By default, parsing runs on-device with Apple Intelligence; cloud parsing only happens if you enable it with your own API key. For full details, see the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+    <p>ExpenseAI stores all your entries, receipt photos, and settings locally on your device. There is no account, no cloud sync, and no third-party analytics. By default, parsing and receipt OCR run on-device. Cloud parsing only happens if you enable it with your own API key; optional receipt-image sharing requires an additional consent step. For full details, see the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
   </div>
 
   <div class="section note">
