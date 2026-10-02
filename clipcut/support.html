@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ClipCut support and troubleshooting.">
+  <title>ClipCut Support</title>
+  <style>
+    :root { color-scheme:light dark; --bg:#f5f7fb; --card:#fff; --text:#152033; --muted:#5c687a; --line:#dde3ec; --link:#2563eb; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#9da7b3; --line:#30363d; --link:#79a9ff; } }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:780px; margin:auto; padding:32px 18px 56px; } article { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:clamp(22px,5vw,42px); }
+    h1 { margin:0 0 4px; font-size:clamp(30px,6vw,42px); } h2 { margin:28px 0 8px; font-size:20px; } h3 { margin:18px 0 4px; font-size:17px; } p,ul,ol { margin:8px 0; } ul,ol { padding-left:22px; }
+    .tagline,.meta { color:var(--muted); } .tagline { font-size:20px; } a { color:var(--link); } nav { margin-bottom:18px; } nav a { margin-right:16px; }
+  </style>
+</head>
+<body><main>
+  <nav><a href="index.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <article>
+    <h1>ClipCut Support</h1>
+    <p class="meta">Last updated: October 2, 2026</p>
+    <p>ClipCut is a batch video trimming, color grading and export tool for Mac.</p>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:hswillg@gmail.com?subject=ClipCut%20Support">hswillg@gmail.com</a>. Include the app version, your Mac model, macOS version, the format of the clips involved, and a short description of the issue.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>macOS 14 or later</li>
+      <li>Video files your Mac can play (MOV, MP4 and other QuickTime-compatible formats)</li>
+    </ul>
+
+    <h2>Quick start</h2>
+    <ol>
+      <li>Choose File &gt; Add Clips…, or drag video files into the Clip Queue on the left.</li>
+      <li>Select a clip and set its in and out points on the trim track (I and O).</li>
+      <li>In the Grade tab, pick a look or import a <code>.cube</code> LUT, and adjust color. The look applies to every clip in the group.</li>
+      <li>Open the Export tab, tick the groups to send (or All), choose a name, folder, codec and bitrate.</li>
+      <li>Press Export. Progress for each clip is shown in the Queue tab.</li>
+    </ol>
+
+    <h2>Troubleshooting</h2>
+    <h3>A clip cannot be added or shows an error</h3>
+    <p>ClipCut reads the formats macOS can decode. If a file does not play in QuickTime Player, convert it to a supported format first.</p>
+
+    <h3>An export failed or stalled</h3>
+    <p>Check that the destination folder still exists and has free space, then use the retry button on that clip's row in the Queue tab. Clips on a network volume or external disk can stall if the volume disconnects.</p>
+
+    <h3>My LUT does not appear</h3>
+    <p>Use Import in the LUT grid or File &gt; Import LUT… and choose a <code>.cube</code> file. Only 3D LUTs in the .cube format are supported.</p>
+
+    <h3>Export shows the Pro screen</h3>
+    <p>ClipCut includes 5 free exports. Importing, trimming, grading and preview are always free. Lifetime Pro is a one-time purchase that unlocks unlimited exports.</p>
+
+    <h3>A purchase is missing</h3>
+    <p>Choose ClipCut &gt; Restore Purchases and confirm the Mac is signed in to the Apple Account that made the purchase.</p>
+
+    <h2>Privacy and terms</h2>
+    <p>See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
+  </article>
+</main></body>
+</html>
