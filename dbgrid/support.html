@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DBGrid Support</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin: 24px; line-height: 1.6; color: #111; max-width: 720px; }
+    h1,h2 { margin: 0.8em 0 0.4em; }
+    .meta { color:#555; font-size: 0.95em; }
+    ul { padding-left: 18px; }
+    .section { margin-top: 18px; }
+    a { color: #0d7dff; }
+  </style>
+</head>
+<body>
+  <h1>DBGrid Support</h1>
+  <div class="meta">Last updated: October 24, 2026</div>
+
+  <p>Need help with DBGrid? Contact us and we'll respond as soon as possible.</p>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hswillg@gmail.com">hswillg@gmail.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>App Overview</h2>
+    <p>DBGrid is a native macOS client for MySQL and Oracle. Browse schemas, write SQL with schema-aware completion, edit data right in the grid, design tables visually and keep production databases safe. The database engine is bundled with the app — there is no Java to install.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Connection tree with schemas, tables, views, procedures, columns, indexes and triggers; instant filter across thousands of tables</li>
+      <li>SQL editor with syntax highlighting, completion, formatting and ⌘↩ to run the current statement, a selection or the whole script</li>
+      <li>Oracle PL/SQL blocks and DBMS_OUTPUT; MySQL DELIMITER support</li>
+      <li>Edit cells, add and delete rows in the grid; preview the SQL, then Apply or Revert</li>
+      <li>Visual table designer for fields, indexes and options, with the generated DDL shown before it runs</li>
+      <li>Saved queries with folders and notes, full SQL history, export to CSV, JSON, SQL and text</li>
+      <li>DEV / STAGING / PROD color tags; production connections open read-only and ask before any write</li>
+      <li>SSH tunnels and SSL/TLS; passwords stored only in the macOS Keychain</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="section">
+      <h3>Which databases are supported?</h3>
+      <p>MySQL and Oracle Database (connecting by service name or SID).</p>
+    </div>
+
+    <div class="section">
+      <h3>What does DBGrid Pro add?</h3>
+      <p>The free version saves one connection. DBGrid Pro is a one-time purchase that unlocks unlimited connections on every Mac signed in with your Apple Account. There is no subscription. Use “Restore Purchases” in the upgrade window to unlock Pro on another Mac.</p>
+    </div>
+
+    <div class="section">
+      <h3>Where are my passwords stored?</h3>
+      <p>Only in your macOS Keychain. Connection settings, query history and saved queries stay on your Mac. DBGrid has no account and sends no analytics.</p>
+    </div>
+
+    <div class="section">
+      <h3>How do I connect through an SSH tunnel?</h3>
+      <p>Open the connection, switch to the SSH tab, enable the tunnel and enter the SSH host, user and either a password or a private key file. DBGrid connects to the database through the tunnel.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Connection times out:</strong> check the host, port and firewall rules, or raise the connect timeout in the connection's Advanced tab.</li>
+      <li><strong>Oracle ORA-28009 when logging in as SYS:</strong> choose the SYSDBA role in the connection dialog.</li>
+      <li><strong>A table cannot be edited:</strong> editing in the grid needs a primary or unique key so every change targets exactly one row.</li>
+      <li><strong>Writes are blocked on a connection:</strong> production connections start as read-only sessions — turn off “Read-only session” in the red banner to write.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Privacy &amp; Terms</h2>
+    <p>See the <a href="https://hybridtheorylink.github.io/privacy">Privacy Policy</a> and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple Standard EULA)</a>.</p>
+  </div>
+</body>
+</html>
