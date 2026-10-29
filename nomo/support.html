@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support — nomo</title>
+  <title>Support — Nomo</title>
   <style>
     :root {
       --bg: #0a0a0a;
@@ -252,7 +252,7 @@
 <body>
 
 <header>
-  <span class="logo">nomo</span>
+  <span class="logo">Nomo</span>
   <nav>
     <a href="https://nextapp.me/nomo/privacy/">Privacy</a>
     <a href="https://nextapp.me/nomo/terms/">Terms</a>
@@ -262,35 +262,34 @@
 <main>
   <div class="page-label">Support</div>
   <h1>How Can We Help?</h1>
-  <p class="tagline">Your Notion databases, reimagined as a calendar.</p>
+  <p class="tagline">Your Notion databases, Google Calendar and iPhone calendars in one calendar.</p>
 
   <!-- How it works -->
   <h2>How It Works</h2>
   <ol class="steps">
-    <li>Connect your Notion account with one tap via secure OAuth.</li>
-    <li>Choose a Notion database that has a Date property.</li>
-    <li>nomo maps every page onto your calendar by its date.</li>
-    <li>Tap any entry to view or edit it. Drag to reschedule — changes sync back to Notion instantly.</li>
-    <li>Add multiple databases, each with its own color, in one calendar.</li>
+    <li>Connect the calendars you use: your Notion account, one or more Google accounts, and/or the calendars already on your iPhone.</li>
+    <li>In <strong>Settings → Connect Calendar</strong>, choose which Notion databases and calendars to show, each with its own color.</li>
+    <li>Nomo shows every page and event in a day, week or month view.</li>
+    <li>Tap an entry to view or edit it. Drag to reschedule — changes are saved back to Notion or Google Calendar instantly.</li>
   </ol>
 
   <!-- Features -->
   <h2>Features</h2>
   <ul class="features">
-    <li>View multiple Notion databases in one calendar, each with its own color</li>
-    <li>Tap any day to create a new page in your database</li>
-    <li>Edit titles and properties directly from the app</li>
-    <li>Drag and drop to reschedule with instant sync to Notion</li>
-    <li>Swipe between months or jump to any date</li>
-    <li>Pull to refresh and stay up to date</li>
-    <li>Intentionally minimal — no clutter, just your Notion data as a calendar</li>
+    <li>Notion databases, Google Calendar and iPhone calendars (iCloud, Exchange and more) in one view</li>
+    <li>Day, week and month layouts</li>
+    <li>Tap any day to create a new event or Notion page</li>
+    <li>Edit titles, dates and times directly from the app</li>
+    <li>Drag and drop to reschedule, saved straight back to the source calendar</li>
+    <li>Several Google accounts at once</li>
+    <li>Pick a color for each calendar or database</li>
   </ul>
 
   <!-- Requirements -->
   <h2>Requirements</h2>
   <ul>
-    <li>A Notion account (free or paid)</li>
-    <li>At least one Notion database with a Date property</li>
+    <li>iPhone with iOS 17 or later</li>
+    <li>At least one of: a Notion account (free or paid) with a database that has a Date property, a Google account, or calendars on your iPhone</li>
   </ul>
 
   <!-- FAQ -->
@@ -301,9 +300,9 @@
       <summary>Why isn't nomo connecting to my Notion account?</summary>
       <div class="faq-body">
         <p>Make sure you complete the full OAuth authorization flow in Safari. If the connection fails:</p>
-        <p>1. Go to Settings → Disconnect Notion, then try connecting again.<br>
+        <p>1. Go to <strong>Settings → Sign Out of Notion</strong>, then try connecting again.<br>
            2. Check that you have an active internet connection.<br>
-           3. In your Notion account under <strong>Settings → My connections</strong>, remove nomo and re-authorize.</p>
+           3. In your Notion account under <strong>Settings → Connections</strong>, remove nomo and re-authorize.</p>
         <p>If the issue persists, please email us with your iOS version and a description of where the flow stops.</p>
       </div>
     </details>
@@ -348,17 +347,57 @@
     </details>
 
     <details class="faq-item">
-      <summary>Is my Notion data stored on your servers?</summary>
+      <summary>How do I connect Google Calendar?</summary>
       <div class="faq-body">
-        <p>No. nomo fetches your Notion data directly from the Notion API and displays it on your device. We do not operate backend servers that store your Notion content.</p>
-        <p>Your Notion OAuth token is stored securely in the iOS Keychain on your device and is never transmitted to us. See our <a href="https://nextapp.me/nomo/privacy/">Privacy Policy</a> for full details.</p>
+        <p>Go to <strong>Settings → Connect Calendar</strong> and tap <strong>Sign in with Google</strong>. Google's sign-in page opens in the browser; choose your account and allow Nomo to see your calendar list and view and edit your events. Your Google calendars then appear under the Google group, where you can choose which ones to show.</p>
+        <p>To add more accounts, tap <strong>Add Another Google Account</strong> in the same place.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Why does Nomo ask for access to my Google Calendar?</summary>
+      <div class="faq-body">
+        <p>Nomo asks for exactly what it needs to work as your calendar:</p>
+        <p>• <strong>See your list of calendars</strong> — so you can pick which Google calendars to show. Nomo never changes this list.<br>
+           • <strong>View and edit events</strong> — so your events appear in Nomo, and so events you create, edit, drag or delete in Nomo are saved to Google Calendar. Nomo only changes an event when you do.<br>
+           • <strong>Your email address</strong> — to tell your Google accounts apart.</p>
+        <p>Your Google data goes directly between your iPhone and Google. It is never stored on our servers, shared, sold, or used for ads or AI. See the <a href="https://nextapp.me/nomo/privacy/">Privacy Policy</a> for details.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>I added Google in iOS Settings. Do I also need to sign in with Google in Nomo?</summary>
+      <div class="faq-body">
+        <p>No. Google accounts added in iOS Settings → Calendar → Accounts show up in Nomo through your iPhone's calendars once you allow calendar access. Signing in with Google inside Nomo is an alternative that doesn't depend on iOS Settings. If you use both, the same calendar can appear twice — just show it from one place.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Why can't I drag or edit some events?</summary>
+      <div class="faq-body">
+        <p>Some calendars are read-only — for example holidays, birthdays, subscribed calendars, or calendars shared with you without edit permission. Their events are shown but can't be changed. For repeating events, Nomo asks whether to change just this event or this and all following events when you save or delete; dragging moves only that one occurrence.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I disconnect a Google account?</summary>
+      <div class="faq-body">
+        <p>In <strong>Settings</strong>, find the Google account under Connected Account and tap <strong>Disconnect</strong>. Nomo revokes its access with Google and deletes the sign-in token from your device. You can also remove Nomo at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is my calendar data stored on your servers?</summary>
+      <div class="faq-body">
+        <p>No. Nomo fetches your Notion pages and Google Calendar events directly from Notion and Google and displays them on your device; iPhone calendars stay on your iPhone. We do not operate servers that store your calendar content.</p>
+        <p>Your Notion and Google sign-in tokens are stored securely in the iOS Keychain on your device and are never sent to us. See our <a href="https://nextapp.me/nomo/privacy/">Privacy Policy</a> for full details.</p>
       </div>
     </details>
 
     <details class="faq-item">
       <summary>How do I disconnect my Notion account?</summary>
       <div class="faq-body">
-        <p>Go to <strong>Settings → Disconnect Notion</strong> inside the app. This removes the stored OAuth token from your device. To fully revoke access, also visit your Notion account under <strong>Settings → My connections</strong> and remove nomo from there.</p>
+        <p>Go to <strong>Settings → Sign Out of Notion</strong> inside the app. This removes the stored OAuth token from your device. To fully revoke access, also visit your Notion account under <strong>Settings → Connections</strong> and remove nomo from there.</p>
       </div>
     </details>
 
@@ -382,7 +421,7 @@
 </main>
 
 <footer>
-  <p>© 2026 nomo · OPC</p>
+  <p>© 2026 Nomo · OPC</p>
   <nav>
     <a href="https://nextapp.me/nomo/privacy/">Privacy</a>
     <a href="https://nextapp.me/nomo/terms/">Terms</a>
